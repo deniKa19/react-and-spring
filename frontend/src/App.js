@@ -1,36 +1,56 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter, Route, Switch, withRouter} from 'react-router-dom';
+import {connect} from 'react-redux';
+import * as actions from './store/actions';
+import Landing from './Components/Landing';
+import Profile from './Components/Profile';
+import Register from "./Components/Register";
+import Header from "./Components/Header/Header";
+import TopNavBar from './Components/Header/TopNavBar';
+import Login from "./Components/Login";
+import './css/App.css';
+import AdsHelper from "./Components/AdsHelper";
+import UserAds from "./Components/UserAds";
 
 class App extends Component {
-
-    state = {};
-
     componentDidMount() {
-        setInterval(this.hello, 250);
+        // reaches out and sets user-logged in to store
+        this.props.fetchUser()
     }
 
-    hello = () => {
-        fetch('/api/hello')
-            .then(response => response.text())
-            .then(message => {
-                this.setState({message: message});
-            });
-    };
-
     render() {
+        let blurContent = "";
+        if (this.props.menuShown) {
+            blurContent = "blur-content"
+        }
         return (
-            <div className="App">
-                <header className="App-header">
-                    <img src={logo} className="App-logo" alt="logo"/>
-                    <h1 className="App-title">{this.state.message}</h1>
-                </header>
-                <p className="App-intro">
-                    To get started, edit <code>src/App.js</code> and save to reload.
-                </p>
-            </div>
-        );
+
+            <BrowserRouter>
+                <React.Fragment>
+                    <div className={"main-cont"} id={"top"}>
+                        <Header/>
+                        <TopNavBar/>
+                        <main className={`main ${blurContent}`} onClick={this.props.closeMenu}>
+                            <Switch>
+                                <Route path={"/profile"} render={() => <Profile/>}/>
+                                <Route path={"/login"} render={() => <Login/>}/>
+                                <Route path={"/register"} render={() => <Register/>}/>
+                                <Route path={"/ads"} render={(routeProps) => <AdsHelper {...routeProps}/>}/>
+                                <Route path={"/"} exact render={() => <Landing/>}/>
+                            </Switch>
+                        </main>
+                    </div>
+                </React.Fragment>
+            </BrowserRouter>
+        )
     }
 }
 
-export default App;
+const mapStateToProps = state => {
+    return {
+        menuShown: state.menuShown
+    }
+};
+export default connect(mapStateToProps, actions)(App);
+
+

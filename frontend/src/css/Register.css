@@ -1,0 +1,48 @@
+.reg-container {
+    padding-bottom: 20vh;
+}
+
+.reg-header {
+    padding-top: 6vh;
+    margin-bottom: 15vh;
+}
+.reg-header h1 {
+    color: var(--blue-grey);
+}
+.register-cont {
+    display: flex;
+    justify-content: space-between;
+    margin: 6vh 0;
+    padding: 8%;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+
+}
+.register-cont > div {
+    display: flex;
+    align-items: center;
+}
+.register-cont label {
+    color: var(--medium-green)
+}
+.register-cont input {
+    border: none;
+    border-bottom: .5px solid rgba(0, 108, 0, 0.35);
+    padding-bottom: 10px;
+    width: 47vw;
+    font-size: 16px;
+    text-align: center;
+    color: var(--medium-green);
+}
+.register-cont input:focus {
+    outline: 0;
+}
+.register-submit-cont {
+    text-align: right;
+}
+#register-button {
+    background-color: var(--cool-green);
+    padding: 5%;
+    color: white;
+}

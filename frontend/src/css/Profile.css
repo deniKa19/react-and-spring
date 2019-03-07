@@ -1,0 +1,7 @@
+.prof-all-btn {
+    background-color: var(--medium-green) !important;
+}
+.prof-my-btn {
+    background-color: var(--cool-green) !important;
+    color: #ffffff !important;
+}

@@ -1,0 +1,33 @@
+.big-login-cont {
+    filter: blur(3px);
+}
+
+.login-cont {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+}
+.form-fields {
+    text-align: center;
+}
+.btn-cont {
+    margin-top: 10vh;
+    text-align: center;
+}
+.btn-cont button {
+    margin-left: 20px;
+}
+.login-header {
+    margin-top: 10px !important;
+}
+.progress {
+    opacity: 0;
+    transition: all 0.2s;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    z-index: 1000;
+}
+.loading {
+    opacity: 1;
+}

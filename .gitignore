@@ -2,3 +2,5 @@
 *.iml
 target
 
+# Node Modules
+node_modules/

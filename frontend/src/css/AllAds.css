@@ -1,0 +1,101 @@
+#search {
+    margin-left: 5px;
+    width: 80%;
+    border: none;
+    font-size: 20px;
+    text-align: center;
+}
+#search:focus {
+    outline: 0;
+}
+.ads-cont {
+    margin: 5vh 0 10vh 0;
+}
+.ind-ad-cont {
+    margin: 7% 0;
+    background-color: #f4f4f4 !important;
+}
+.big-ad-cont {
+    margin-top: 3vh;
+    height: 85vh;
+    position: relative;
+}
+.action-cont {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+.all-ads-header {
+    margin: 5vh 0 !important;
+}
+.search-cont {
+    border-top: 1px solid #d7d7d7;
+}
+.big-ad-header {
+    display: flex;
+    justify-content: space-between;
+}
+.back-button {
+    position: absolute !important;
+    right: 10px;
+    bottom: 10px;
+    height: 45px !important;
+    width: 45px !important;
+}
+.save-ad-butt {
+    background-color: green !important;
+}
+.ad-description {
+    overflow: scroll !important;
+    height: 40vh;
+}
+.all-ads-cont {
+    margin-bottom: 3vh;
+}
+.back-to-search-btn {
+    position: fixed !important;
+    right: 10px;
+    bottom: 10px;
+}
+.user-ads-header {
+    margin-top: 5vh !important;
+}
+.search-hidden {
+    opacity: 0;
+}
+.loading {
+    filter: blur(2px);
+}
+.topper {
+    display: flex;
+    justify-content: space-between;
+}
+.topper button {
+    padding-top: 0 !important;
+}
+.spinner-loading {
+    opacity: 1;
+}
+.success-p {
+    color: white !important;
+}
+.success-message {
+    background-color: #4caa44;
+    width: 60vw;
+    position: absolute;
+    bottom: -70px;
+    left: 10px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4%;
+    color: white;
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+}
+.success-message-active {
+    bottom: 10px;
+    left: 10px;
+    opacity: 1;
+}

@@ -1,0 +1,68 @@
+/************************************************
+Global
+************************************************/
+
+.desktop {
+    display: none;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+:root {
+    --deep-blue: #0F2A3B;
+    --blue-gray: #34414A;
+    --medium-green: #78A17F;
+    --cool-green: #B2C994;
+    --soft-yello: #FBF8AF;
+    --success-green: #4BB543;
+    --delete-red: #9f0000;
+
+}
+
+/************************************************
+menu
+************************************************/
+
+.menu-toggle {
+    position: fixed;
+    background-color: rgba(173, 173, 173, 0.65);
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 1;
+}
+
+/************************************************
+Content
+************************************************/
+.main {
+    transition: all 0.2s ease-in;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+    padding: 0 4%;
+    margin-top: 10vh;
+}
+.blur-content {
+    z-index: 1;
+    filter: blur(3px);
+}
+
+
